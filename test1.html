@@ -67,7 +67,15 @@
             cursor: pointer;
             font-size: 16px;
         }
-        button:hover {
+        button:disabled {
+
+            background-color: #ccc;
+
+            cursor: not-allowed;
+
+        }
+
+        button:hover:enabled {
             background-color: #e04353;
         }
         .question {
@@ -130,6 +138,15 @@
             document.getElementById('q2').style.display = 'none';
             document.getElementById('thankYou').style.display = 'block';
         }
+        function toggleButton(buttonId, inputField) {
+
+            let button = document.getElementById(buttonId);
+
+            button.disabled = inputField.value.trim() === "";
+
+        }
+
+        
         // Ensure only the first question is visible on page load
         window.onload = function() {
             document.getElementById('q1').style.display = 'block';
