@@ -82,7 +82,7 @@
 </head>
 <body>
     <div>
-        <h1>We are getting married soon rlol lol!</h1>
+        <h1>We are getting married soon Navsuuu!</h1>
         <p>We would love for you to celebrate with us</p>
         <p><strong>Wedding at Krishna Beach Resorts, Kannur, Kerala on 19th June (Morning)</strong></p>
         <p><strong>Reception at Citadel Conventions, Hyderabad, Telangana on 22nd June (Evening)</strong></p>
@@ -91,8 +91,9 @@
     <form action="https://docs.google.com/forms/d/e/1FAIpQLSfzrjcDXKwsH6X_wt9qF423OkqgSafEWHg_9SECQKRFyQP94A/formResponse">
         <div id="q1">
             <label for="entry.1498135098">Hey there, which one of our lovely friends is this? </label>
-            <input type="text" name="entry.1498135098" required>
-            <button type="button" onclick="showNext('q1', 'q2')">Next</button>
+            <input type="text" name="entry.1498135098" required oninput="toggleButton('q1Next', this)">
+            
+            <button type="button" id="q1Next" onclick="showNext('q1', 'q2')" disabled>Next</button>
         </div>
 
         <div id="q2" class="question">
