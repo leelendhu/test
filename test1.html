@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wedding RSVP</title>
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            background-image: url('invite.jpg'); /* Replace with your image */
+            background-size: cover;
+            background-position: center;
+            color: black;
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+        form {
+            margin-top: 20px;
+            background: transparent;
+            padding: 20px;
+            border-radius: 10px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 80%;
+            max-width: 500px;
+        }
+        input[type="text"], button {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        button {
+            background-color: #ff4b5c;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button:hover {
+            background-color: #e04353;
+        }
+        .question {
+            display: none;
+        }
+        #thankYou {
+            display: none;
+            font-size: 18px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1>We are getting married soon!</h1>
+        <p>We would love for you to celebrate with us</p>
+        <p><strong>Wedding at Krishna Beach Resorts, Kannur, Kerala on 19th June Morning</strong></p>
+        <p><strong>Reception at Citadel Conventions, Hyderabad, Telangana on 22nd June Evening</strong></p>
+    </div>
+
+    <form action="https://docs.google.com/forms/d/e/1FAIpQLSfzrjcDXKwsH6X_wt9qF423OkqgSafEWHg_9SECQKRFyQP94A/formResponse">
+        <div id="q1">
+            <label for="entry.1498135098">Hey there, which one of our lovely friends is this? </label>
+            <input type="text" name="entry.1498135098" required>
+            <button type="button" onclick="showNext('q1', 'q2')">Next</button>
+        </div>
+
+        <div id="q2" class="question">
+            <label>Will you be able to attend the event?</label><br>
+            <input type="radio" name="entry.877086558" value="Yes,  I'll be there" required onclick="showNext('q2', 'q3')"> Yes, I will be there<br>
+            <input type="radio" name="entry.877086558" value="Sorry, I can't make it" required onclick="showThankYou()"> Sorry, I can't make it<br>
+        </div>
+
+        <div id="q3" class="question">
+            <label for="entry.628168623">Will you be bringing your partner/family members? If yes, please mention their name(s)?</label>
+            <input type="text" name="entry.628168623" required>
+            <button type="button" onclick="showNext('q3', 'q4')">Next</button>
+        </div>
+
+        <div id="q4" class="question">
+            <label>Which event(s) will you attend?</label><br>
+            <input type="checkbox" name="entry.1448897046" value="Sangeet (18th June evening) at Kannur, Kerala"> Sangeet (18th June evening) at Kannur, Kerala<br>
+            <input type="checkbox" name="entry.1448897046" value="Wedding (19th June morning) at Kannur, Kerala"> Wedding (19th June morning) at Kannur, Kerala<br>    
+            <input type="checkbox" name="entry.1448897046" value="Reception (22nd June evening) at Hyderabad, Telangana"> Reception (22nd June evening) at Hyderabad, Telangana<br>
+            <button type="submit">Submit Form</button>
+        </div>
+    </form>
+
+    <div id="thankYou">
+        <p>Thank you for letting us know. We will miss you at the event!</p>
+    </div>
+
+    <script>
+        function showNext(currentId, nextId) {
+            document.getElementById(currentId).style.display = 'none';
+            document.getElementById(nextId).style.display = 'block';
+        }
+        function showThankYou() {
+            document.getElementById('q2').style.display = 'none';
+            document.getElementById('thankYou').style.display = 'block';
+        }
+        // Ensure only the first question is visible on page load
+        window.onload = function() {
+            document.getElementById('q1').style.display = 'block';
+        };
+    </script>
+</body>
+</html>

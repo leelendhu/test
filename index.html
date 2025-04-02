@@ -1,0 +1,102 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Website</title>
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #f4f4f4;
+        }
+        .image-container {
+            text-align: center;
+        }
+        .image-container img {
+            width: 80%;
+            max-width: 600px;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .rsvp-button {
+            background-color: #ff4b5c;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 18px;
+            border-radius: 5px;
+            cursor: pointer;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+            margin-top: 10px;
+        }
+        .rsvp-button:hover {
+            background-color: #e04353;
+        }
+    </style>
+</head>
+<body>
+    <div class="image-container">
+        <img src="image.jpg" alt="Displayed Image"> <!-- Replace with your image -->
+        <!-- <p></p>
+        <button class="rsvp-button" onclick="window.location.href='test1.html'">RSVP</button>
+    </div>
+</body>
+</html> --> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Website</title>
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #f4f4f4;
+        }
+        .image-container {
+            position: relative; /* Enable absolute positioning for the button */
+            text-align: center;
+        }
+        .image-container img {
+            width: 80%;
+            max-width: 600px;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .rsvp-button {
+            position: absolute; /* Absolute positioning of the button */
+            bottom: 20px; /* Position the button 20px from the bottom */
+            left: 50%; /* Center the button horizontally */
+            transform: translateX(-50%); /* Adjust for true center */
+            background-color: #ff4b5c;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 18px;
+            border-radius: 5px;
+            cursor: pointer;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .rsvp-button:hover {
+            background-color: #e04353;
+        }
+    </style>
+</head>
+<body>
+    <div class="image-container">
+        <img src="image.jpg" alt="Displayed Image"> <!-- Replace with your image -->
+        <button class="rsvp-button" onclick="window.location.href='test1.html'">RSVP</button>
+    </div>
+</body>
+</html>
